@@ -1,0 +1,280 @@
+export default function GuitarArrangementsSite() {
+  const songs = [
+    {
+      title: "A Simple Twist of Fate",
+      artist: "Bob Dylan",
+      tuning: "Dropped D",
+      capo: "None",
+      difficulty: "Intermediate",
+      notes:
+        "Notes can be added here later. This arrangement is available in Guitar Pro format now, with room to add PDF and audio files when they are ready.",
+      files: [
+        { label: "Guitar Pro", href: "#", status: "Available" },
+        { label: "PDF", href: "#", status: "Coming soon" },
+        { label: "Audio Preview", href: "#", status: "Coming soon" },
+      ],
+      tags: ["Fingerstyle", "Dropped D", "Intermediate"],
+    },
+    {
+      title: "Keep Me in Your Heart for a While",
+      artist: "Warren Zevon",
+      tuning: "Standard",
+      capo: "None",
+      difficulty: "Easy",
+      notes:
+        "Notes can be added here later. The current PDF shows a standard-tuning arrangement and the score is available across six pages, beginning with an intro and moving through verse/chorus, bridge, solo, and outro sections. fileciteturn3file0",
+      files: [
+        { label: "Guitar Pro", href: "#", status: "Available" },
+        { label: "PDF", href: "#", status: "Available" },
+        { label: "Audio Preview", href: "#", status: "Coming soon" },
+      ],
+      tags: ["Fingerstyle", "Standard Tuning", "Easy"],
+    },
+      ,
+    {
+      title: "Abraham, Martin and John",
+      artist: "Richard Holler",
+      tuning: "Open G",
+      capo: "None",
+      difficulty: "Intermediate",
+      notes:
+        "Notes can be added here later. The arrangement uses Open G tuning (D–G–D) and features a flowing fingerstyle texture with alternating bass and chord voicings. fileciteturn4file0",
+      files: [
+        { label: "Guitar Pro", href: "#", status: "Available" },
+        { label: "PDF", href: "#", status: "Available" },
+        { label: "Audio Preview", href: "#", status: "Coming soon" },
+      ],
+      tags: ["Fingerstyle", "Open G", "Intermediate"],
+    }
+      ,
+    {
+      title: "Angel From Montgomery",
+      artist: "John Prine",
+      tuning: "Dropped D",
+      capo: "None",
+      difficulty: "Easy",
+      notes:
+        "Notes can be added here later. This arrangement is in Dropped D tuning and uses a steady alternating bass with simple melodic movement.",
+      files: [
+        { label: "Guitar Pro", href: "#", status: "Available" },
+        { label: "PDF", href: "#", status: "Available" },
+        { label: "Audio Preview", href: "#", status: "Coming soon" },
+      ],
+      tags: ["Fingerstyle", "Dropped D", "Easy"],
+    },
+    {
+      title: "Angie",
+      artist: "The Rolling Stones",
+      tuning: "Standard",
+      capo: "None",
+      difficulty: "Intermediate",
+      notes:
+        "Notes can be added here later. This arrangement follows a multi-section structure (A, B, C, D sections) with a flowing fingerstyle texture and melodic embellishments.",
+      files: [
+        { label: "Guitar Pro", href: "#", status: "Available" },
+        { label: "PDF", href: "#", status: "Available" },
+        { label: "Audio Preview", href: "#", status: "Coming soon" },
+      ],
+      tags: ["Fingerstyle", "Standard Tuning", "Intermediate"],
+    }
+      ,
+    {
+      title: "Doctor My Eyes",
+      artist: "Jackson Browne",
+      tuning: "Open D",
+      capo: "None",
+      difficulty: "Intermediate",
+      notes:
+        "Notes can be added here later. This arrangement uses Open D tuning and incorporates a driving rhythmic feel with alternating bass and chordal movement. fileciteturn6file0",
+      files: [
+        { label: "Guitar Pro", href: "#", status: "Available" },
+        { label: "PDF", href: "#", status: "Available" },
+        { label: "Audio Preview", href: "#", status: "Coming soon" },
+      ],
+      tags: ["Fingerstyle", "Open D", "Intermediate"],
+    },
+    {
+      title: "Helpless",
+      artist: "Neil Young",
+      tuning: "Standard",
+      capo: "None",
+      difficulty: "Easy",
+      notes:
+        "Notes can be added here later. This arrangement is based on a simple chord progression (D–A–G) with a steady strumming or fingerstyle pattern. fileciteturn6file1",
+      files: [
+        { label: "Guitar Pro", href: "#", status: "Available" },
+        { label: "PDF", href: "#", status: "Available" },
+        { label: "Audio Preview", href: "#", status: "Coming soon" },
+      ],
+      tags: ["Fingerstyle", "Standard Tuning", "Easy"],
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-stone-50 text-stone-900">
+      <header className="border-b border-stone-200 bg-white/90 backdrop-blur">
+        <div className="mx-auto max-w-5xl px-6 py-10">
+          <p className="text-sm uppercase tracking-[0.2em] text-stone-500">
+            Fingerstyle Guitar Arrangements
+          </p>
+          <h1 className="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">
+            Randall Eubank
+          </h1>
+          <p className="mt-4 max-w-2xl text-base leading-7 text-stone-600">
+            A collection of fingerpicking arrangements for players who want clean, playable versions
+            of songs in Guitar Pro and PDF format.
+          </p>
+        </div>
+      </header>
+
+      <main className="mx-auto max-w-5xl px-6 py-10">
+        <section className="grid gap-6 md:grid-cols-[1.2fr_0.8fr]">
+          <div className="rounded-3xl bg-white p-7 shadow-sm ring-1 ring-stone-200">
+            <h2 className="text-2xl font-semibold">About this site</h2>
+            <p className="mt-3 text-stone-600 leading-7">
+              These arrangements were created over many years for solo fingerstyle guitar. Each song page
+              includes basic playing information and download links for the file formats that are available.
+            </p>
+            <p className="mt-3 text-stone-600 leading-7">
+              The goal is simple: make the music easy to browse and easy to play.
+            </p>
+          </div>
+
+          <div className="rounded-3xl bg-stone-900 p-7 text-stone-50 shadow-sm">
+            <h2 className="text-2xl font-semibold">Available formats</h2>
+            <div className="mt-4 grid gap-3 text-sm text-stone-200">
+              <div className="rounded-2xl border border-white/10 p-4">
+                <p className="font-medium text-white">Guitar Pro</p>
+                <p className="mt-1">For playback, tempo control, and note-by-note study.</p>
+              </div>
+              <div className="rounded-2xl border border-white/10 p-4">
+                <p className="font-medium text-white">PDF</p>
+                <p className="mt-1">For quick printing and practice away from the screen.</p>
+              </div>
+              <div className="rounded-2xl border border-white/10 p-4">
+                <p className="font-medium text-white">Audio Preview</p>
+                <p className="mt-1">For hearing the arrangement before downloading.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-10">
+          <div className="flex items-end justify-between gap-4">
+            <div>
+              <p className="text-sm uppercase tracking-[0.2em] text-stone-500">Song Library</p>
+              <h2 className="mt-2 text-3xl font-semibold tracking-tight">Arrangements</h2>
+            </div>
+            <div className="rounded-full border border-stone-200 bg-white px-4 py-2 text-sm text-stone-600 shadow-sm">
+              {songs.length} song{songs.length === 1 ? "" : "s"}
+            </div>
+          </div>
+
+          <div className="mt-6 grid gap-6">
+            {songs.map((song) => (
+              <article
+                key={song.title}
+                className="rounded-3xl bg-white p-7 shadow-sm ring-1 ring-stone-200"
+              >
+                <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
+                  <div className="max-w-2xl">
+                    <h3 className="text-2xl font-semibold tracking-tight">{song.title}</h3>
+                    <p className="mt-1 text-stone-500">{song.artist}</p>
+
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {song.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-full bg-stone-100 px-3 py-1 text-sm text-stone-700"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <p className="mt-5 text-stone-600 leading-7">{song.notes}</p>
+                  </div>
+
+                  <div className="grid min-w-[260px] gap-3 rounded-2xl bg-stone-50 p-5 ring-1 ring-stone-200">
+                    <div className="flex justify-between gap-4 text-sm">
+                      <span className="text-stone-500">Tuning</span>
+                      <span className="font-medium">{song.tuning}</span>
+                    </div>
+                    <div className="flex justify-between gap-4 text-sm">
+                      <span className="text-stone-500">Capo</span>
+                      <span className="font-medium">{song.capo}</span>
+                    </div>
+                    <div className="flex justify-between gap-4 text-sm">
+                      <span className="text-stone-500">Difficulty</span>
+                      <span className="font-medium">{song.difficulty}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                  {song.files.map((file) => (
+                    <a
+                      key={file.label}
+                      href={file.href}
+                      className="rounded-2xl border border-stone-200 bg-white px-4 py-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow"
+                    >
+                      <div className="text-sm text-stone-500">{file.label}</div>
+                      <div className="mt-1 font-medium text-stone-900">{file.status}</div>
+                    </a>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+}
+
+// --- FILTER BY TUNING (NEW FEATURE) ---
+// Add this simple filter UI and logic
+
+// Example filter options you can add in your HTML:
+// <select id="tuningFilter">
+//   <option value="all">All Tunings</option>
+//   <option value="Standard">Standard</option>
+//   <option value="Dropped D">Dropped D</option>
+//   <option value="Open G">Open G</option>
+//   <option value="Open D">Open D</option>
+// </select>
+
+// Then add this JavaScript filtering logic:
+
+const tuningFilter = document.getElementById("tuningFilter");
+
+function renderSongs(filter = "all") {
+  const container = document.getElementById("songsContainer");
+  container.innerHTML = "";
+
+  const filtered = filter === "all"
+    ? songs
+    : songs.filter(s => s.tuning === filter);
+
+  filtered.forEach(song => {
+    const div = document.createElement("div");
+    div.className = "song-card";
+
+    div.innerHTML = `
+      <h3>${song.title}</h3>
+      <p><strong>Artist:</strong> ${song.artist}</p>
+      <p><strong>Tuning:</strong> ${song.tuning}</p>
+      <p><strong>Difficulty:</strong> ${song.difficulty}</p>
+    `;
+
+    container.appendChild(div);
+  });
+}
+
+// Event listener
+tuningFilter.addEventListener("change", (e) => {
+  renderSongs(e.target.value);
+});
+
+// Initial render
+renderSongs();
