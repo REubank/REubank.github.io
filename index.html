@@ -321,12 +321,12 @@
         capo: "None",
         difficulty: "Intermediate",
         notes: "Notes can be added here later.",
-        files: [
-          { label: "Guitar Pro", href: "#", status: "Available" },
-          { label: "PDF", href: "#", status: "Available" },
-          { label: "Audio Preview", href: "#", status: "Coming soon" }
-        ],
-        tags: ["Fingerstyle", "Standard Tuning", "Intermediate"]
+files: [
+  { label: "Guitar Pro", href: "Angie.gpx", status: "Download" },
+  { label: "PDF", href: "angie.pdf", status: "Download" },
+  { label: "Audio Preview", href: "#", status: "Coming soon" }
+],
+tags: ["Fingerstyle", "Standard Tuning", "Intermediate"]
       },
       {
         title: "Doctor My Eyes",
@@ -347,7 +347,7 @@
         artist: "Neil Young",
         tuning: "Standard",
         capo: "None",
-        difficulty: "Easy",
+        difficulty: "Hard",
         notes: "Notes can be added here later.",
         files: [
           { label: "Guitar Pro", href: "#", status: "Available" },
@@ -383,13 +383,12 @@
             </div>
           </div>
           <div class="files">
-            ${song.files.map(file => `
-              <div class="file-box">
-                <div class="file-label">${file.label}</div>
-                <div class="file-status">${file.status}</div>
-              </div>
-            `).join("")}
-          </div>
+  ${song.files.map(file => `
+  <a class="file-box" href="${file.href}" ${file.href !== "#" ? 'target="_blank"' : ''} style="text-decoration:none; color:inherit; display:block;">
+    <div class="file-label">${file.label}</div>
+    <div class="file-status">${file.status}</div>
+  </a>
+`).join("")}          </div>
         </article>
       `).join("");
     }
