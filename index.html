@@ -262,332 +262,326 @@
       <div id="songsContainer"></div>
     </section>
   </main>
+<script>
+  const songs = [
+    {
+      title: "A Simple Twist of Fate",
+      artist: "Bob Dylan",
+      tuning: "Dropped D",
+      capo: "None",
+      difficulty: "Intermediate",
+      notes: "Notes can be added here later.",
+      files: [
+        { label: "Guitar Pro", href: "A_Simple_Twist_Of_Fate.gp", status: "Download" },
+        { label: "PDF", href: "A_Simple_Twist_Of_Fate.pdf", status: "Download" },
+        { label: "Audio Preview", href: "#", status: "Coming soon" }
+      ],
+      tags: ["Fingerstyle", "Dropped D", "Intermediate"]
+    },
+    {
+      title: "Baby I love Your Way",
+      artist: "Peter Frampton",
+      tuning: "Dropped D",
+      capo: "None",
+      difficulty: "Intermediate",
+      notes: "Notes can be added here later.",
+      files: [
+        { label: "Guitar Pro", href: "BabyILoveYourWay.gp", status: "Download" },
+        { label: "PDF", href: "BabyILoveYourWay.pdf", status: "Download" },
+        { label: "Audio Preview", href: "#", status: "Coming soon" }
+      ],
+      tags: ["Fingerstyle", "Dropped D", "Intermediate"]
+    },
+    {
+      title: "Peace Train",
+      artist: "Cat Stevens",
+      tuning: "Standard",
+      capo: "None",
+      difficulty: "Intermediate",
+      notes: "Notes can be added here later.",
+      files: [
+        { label: "Guitar Pro", href: "myPeaceTrain.gpx", status: "Download" },
+        { label: "PDF", href: "myPeaceTrain.pdf", status: "Download" },
+        { label: "Audio Preview", href: "#", status: "Coming soon" },
+        { label: "Lyrics", href: "myPeaceTrainLyrics.pdf", status: "Download" }
+      ],
+      tags: ["Fingerstyle", "Standard", "Intermediate"]
+    },
+    {
+      title: "Nothin'",
+      artist: "Townes Van Zandt",
+      tuning: "Standard",
+      capo: "None",
+      difficulty: "Easy",
+      notes: "Notes can be added here later.",
+      files: [
+        { label: "Guitar Pro", href: "Nothin'.gp", status: "Download" },
+        { label: "PDF", href: "Nothin'.pdf", status: "Download" },
+        { label: "Audio Preview", href: "#", status: "Coming soon" },
+        { label: "Lyrics", href: "NothinLyric.pdf", status: "Download" }
+      ],
+      tags: ["Fingerstyle", "Standard", "Intermediate"]
+    },
+    {
+      title: "Ruby Tuesday",
+      artist: "Rolling Stones",
+      tuning: "Standard",
+      capo: "None",
+      difficulty: "Easy",
+      notes: "Notes can be added here later.",
+      files: [
+        { label: "Guitar Pro", href: "RubyTuesday.gp", status: "Download" },
+        { label: "PDF", href: "RubyTuesday.pdf", status: "Download" },
+        { label: "Audio Preview", href: "#", status: "Coming soon" },
+        { label: "Lyrics", href: "RubyTuesdayLyrics.pdf", status: "Download" }
+      ],
+      tags: ["Fingerstyle", "Standard", "Easy"]
+    },
+    {
+      title: "Pancho and Lefty",
+      artist: "Townes Van Zandt",
+      tuning: "Standard",
+      capo: "None",
+      difficulty: "Easy",
+      notes: "Notes can be added here later.",
+      files: [
+        { label: "Guitar Pro", href: "PanchoandLefty.gp", status: "Download" },
+        { label: "PDF", href: "PanchoandLefty.pdf", status: "Download" },
+        { label: "Audio Preview", href: "#", status: "Coming soon" },
+        { label: "Lyrics", href: "PanchoLeftyLyrics.pdf", status: "Download" }
+      ],
+      tags: ["Fingerstyle", "Standard", "Easy"]
+    },
+    {
+      title: "No Woman No Cry",
+      artist: "Bob Marley",
+      tuning: "Standard",
+      capo: "None",
+      difficulty: "Intermediate",
+      notes: "Notes can be added here later.",
+      files: [
+        { label: "Guitar Pro", href: "NoWomanNoCry.gp", status: "Download" },
+        { label: "PDF", href: "NoWomanNoCry.pdf", status: "Download" },
+        { label: "Audio Preview", href: "#", status: "Coming soon" },
+        { label: "Lyrics", href: "NoWomanNoCryLyrics.pdf", status: "Download" }
+      ],
+      tags: ["Fingerstyle", "Standard", "Intermediate"]
+    },
+    {
+      title: "Beautiful Day",
+      artist: "R. Eubank",
+      tuning: "Standard",
+      capo: "None",
+      difficulty: "Intermediate",
+      notes: "Notes can be added here later.",
+      files: [
+        { label: "Guitar Pro", href: "BeautifulDay.gp", status: "Download" },
+        { label: "PDF", href: "BeautifulDay.pdf", status: "Download" },
+        { label: "Audio Preview", href: "#", status: "Coming soon" },
+        { label: "Lyrics", href: "BeautifulDayLyrics.pdf", status: "Download" }
+      ],
+      tags: ["Fingerstyle", "Standard", "Intermediate"]
+    },
+    {
+      title: "Devil Woman",
+      artist: "Marty Robbins",
+      tuning: "Standard",
+      capo: "None",
+      difficulty: "Intermediate",
+      notes: "Notes can be added here later.",
+      files: [
+        { label: "Guitar Pro", href: "DevilWoman.gpx", status: "Download" },
+        { label: "PDF", href: "DevilWoman.pdf", status: "Download" },
+        { label: "Audio Preview", href: "#", status: "Coming soon" },
+        { label: "Lyrics", href: "DevilWomanLyrics.pdf", status: "Download" }
+      ],
+      tags: ["Fingerstyle", "Standard", "Intermediate"]
+    },
+    {
+      title: "Hold On",
+      artist: "Tom Waits",
+      tuning: "Dropped D",
+      capo: "None",
+      difficulty: "Easy",
+      notes: "Notes can be added here later.",
+      files: [
+        { label: "Guitar Pro", href: "HoldOn.gpx", status: "Download" },
+        { label: "PDF", href: "holdOn.pdf", status: "Download" },
+        { label: "Audio Preview", href: "HoldOn.mp3", status: "Download" }
+      ],
+      tags: ["Fingerstyle", "Dropped D", "Easy"]
+    },
+    {
+      title: "Keep Me in Your Heart for a While",
+      artist: "Warren Zevon",
+      tuning: "Standard",
+      capo: "None",
+      difficulty: "Easy",
+      notes: "Notes can be added here later.",
+      files: [
+        { label: "Guitar Pro", href: "Keep%20Me%20in%20Your%20Heart%20for%20a%20While.gpx", status: "Download" },
+        { label: "PDF", href: "keepMeInYourHeartForAWhile.pdf", status: "Download" },
+        { label: "Audio Preview", href: "#", status: "Coming soon" }
+      ],
+      tags: ["Fingerstyle", "Standard Tuning", "Easy"]
+    },
+    {
+      title: "Abraham, Martin and John",
+      artist: "Richard Holler",
+      tuning: "Open G",
+      capo: "None",
+      difficulty: "Intermediate",
+      notes: "Notes can be added here later.",
+      files: [
+        { label: "Guitar Pro", href: "abrahamMartinandJohn.gp", status: "Download" },
+        { label: "PDF", href: "abrahamMartinandJohn.pdf", status: "Download" },
+        { label: "Audio Preview", href: "AbrahamMartin&John.mp3", status: "Download" }
+      ],
+      tags: ["Fingerstyle", "Open G", "Intermediate"]
+    },
+    {
+      title: "Angel From Montgomery",
+      artist: "John Prine",
+      tuning: "Dropped D",
+      capo: "None",
+      difficulty: "Easy",
+      notes: "Notes can be added here later.",
+      files: [
+        { label: "Guitar Pro", href: "angelFromMontgomery.gp", status: "Download" },
+        { label: "PDF", href: "angelFromMontgomery.pdf", status: "Download" },
+        { label: "Audio Preview", href: "angelFromMontgomery.mp3", status: "Download" }
+      ],
+      tags: ["Fingerstyle", "Dropped D", "Easy"]
+    },
+    {
+      title: "Imagine",
+      artist: "John Lennon",
+      tuning: "Open G",
+      capo: "None",
+      difficulty: "Intermediate",
+      notes: "Notes can be added here later.",
+      files: [
+        { label: "Guitar Pro", href: "Imagine.gp", status: "Download" },
+        { label: "PDF", href: "Imagine.pdf", status: "Download" },
+        { label: "Audio Preview", href: "ImagineWVocal.m4a", status: "Download" }
+      ],
+      tags: ["Fingerstyle", "Dropped D", "Easy"]
+    },
+    {
+      title: "Angie",
+      artist: "The Rolling Stones",
+      tuning: "Standard",
+      capo: "None",
+      difficulty: "Intermediate",
+      notes: "Notes can be added here later.",
+      files: [
+        { label: "Guitar Pro", href: "Angie.gpx", status: "Download" },
+        { label: "PDF", href: "angie.pdf", status: "Download" },
+        { label: "Audio Preview", href: "#", status: "Coming soon" }
+      ],
+      tags: ["Fingerstyle", "Standard Tuning", "Intermediate"]
+    },
+    {
+      title: "Doctor My Eyes",
+      artist: "Jackson Browne",
+      tuning: "Dropped D",
+      capo: "None",
+      difficulty: "Intermediate",
+      notes: "Notes can be added here later.",
+      files: [
+        { label: "Guitar Pro", href: "PanchoandLefty.gp", status: "Download" },
+        { label: "PDF", href: "PanchoandLefty.pdf", status: "Download" },
+        { label: "Audio Preview", href: "#", status: "Coming soon" }
+      ],
+      tags: ["Fingerstyle", "Open D", "Hard"]
+    },
+    {
+      title: "Helpless",
+      artist: "Neil Young",
+      tuning: "Standard",
+      capo: "None",
+      difficulty: "Hard",
+      notes: "Notes can be added here later.",
+      files: [
+        { label: "Guitar Pro", href: "Helpless.gpx", status: "Download" },
+        { label: "PDF", href: "Helpless1.pdf", status: "Download" },
+        { label: "Audio Preview", href: "#", status: "Coming soon" }
+      ],
+      tags: ["Fingerstyle", "Standard Tuning", "Difficult"]
+    }
+  ];
 
-  <script>
-    const songs = [
-      {
-        title: "A Simple Twist of Fate",
-        artist: "Bob Dylan",
-        tuning: "Dropped D",
-        capo: "None",
-        difficulty: "Intermediate",
-        notes: "Notes can be added here later.",
-files: [
-  { label: "Guitar Pro", href: "A_Simple_Twist_Of_Fate.gp", status: "Download" },
-  { label: "PDF", href: "A_Simple_Twist_Of_Fate.pdf", status: "Download" },
-  { label: "Audio Preview", href: "#", status: "Coming soon" }
-],        tags: ["Fingerstyle", "Dropped D", "Intermediate"]
-      },
-      {
-        title: "Baby I love Your Way",
-        artist: "Peter Frampton",
-        tuning: "Dropped D",
-        capo: "None",
-        difficulty: "Intermediate",
-        notes: "Notes can be added here later.",
-files: [
-  { label: "Guitar Pro", href: "BabyILoveYourWay.gp", status: "Download" },
-  { label: "PDF", href: "BabyILoveYourWay.pdf", status: "Download" },
-  { label: "Audio Preview", href: "#", status: "Coming soon" }
-],        tags: ["Fingerstyle", "Dropped D", "Intermediate"]
-      },
-     {
-        title: "Peace Train",
-        artist: "Cat Stevens",
-        tuning: "Standard",
-        capo: "None",
-        difficulty: "Intermediate",
-        notes: "Notes can be added here later.",
-files: [
-  { label: "Guitar Pro", href: "myPeaceTrain.gpx", status: "Download" },
-  { label: "PDF", href: "myPeaceTrain.pdf", status: "Download" },
-  { label: "Audio Preview", href: "#", status: "Coming soon"},
-    { label: "Lyrics", href: "myPeaceTrainLyrics.pdf", status: "Download"}
+  function renderSongs() {
+    const container = document.getElementById("songsContainer");
+    const tuningFilterValue = document.getElementById("tuningFilter").value;
+    const searchValue = document.getElementById("songSearch").value.toLowerCase();
 
-],        tags: ["Fingerstyle", "Standard", "Intermediate"]
-      },
-            {
-        title: "Nothin'",
-        artist: "Townes Van Zandt",
-        tuning: "Standard",
-        capo: "None",
-        difficulty: "Easy",
-        notes: "Notes can be added here later.",
-files: [
-  { label: "Guitar Pro", href: "Nothin'.gp", status: "Download" },
-  { label: "PDF", href: "Nothin'.pdf", status: "Download" },
-  { label: "Audio Preview", href: "#", status: "Coming soon" },
-  { label: "Lyrics", href: "NothinLyric.pdf", status: "Download" }
-],        tags: ["Fingerstyle", "Standard", "Intermediate"]
-      },    
-      {
-        title: "Ruby Tuesday",
-        artist: "Rolling Stones",
-        tuning: "Standard",
-        capo: "None",
-        difficulty: "Easy",
-        notes: "Notes can be added here later.",
-files: [
-  { label: "Guitar Pro", href: "RubyTuesday.gp", status: "Download" },
-  { label: "PDF", href: "RubyTuesday.pdf", status: "Download" },
-  { label: "Audio Preview", href: "#", status: "Coming soon" },
-  { label: "Lyrics", href: "RubyTuesdayLyrics.pdf", status: "Download" }
-],        tags: ["Fingerstyle", "Standard", "Easy"]
-      },    
-      {
-        title: "Pancho and Lefty",
-        artist: "Townes Van Zandt",
-        tuning: "Standard",
-        capo: "None",
-        difficulty: "Easy",
-        notes: "Notes can be added here later.",
-files: [
-  { label: "Guitar Pro", href: "PanchoandLefty.gp", status: "Download" },
-  { label: "PDF", href: "PanchoandLefty.pdf", status: "Download" },
-  { label: "Audio Preview", href: "#", status: "Coming soon" },
-  { label: "Lyrics", href: "PanchoLeftyLyrics.pdf", status: "Download" }
-],        tags: ["Fingerstyle", "Standard", "Easy"]
-      },
+    const filtered = songs.filter(song => {
+      const matchesTuning =
+        tuningFilterValue === "all" || song.tuning === tuningFilterValue;
 
-{
-        title: "No Woman No Cry",
-        artist: "Bob Marley",
-        tuning: "Standard",
-        capo: "None",
-        difficulty: "Intermediate",
-        notes: "Notes can be added here later.",
-files: [
-  { label: "Guitar Pro", href: "NoWomanNoCry.gp", status: "Download" },
-  { label: "PDF", href: "NoWomanNoCry.pdf", status: "Download" },
-  { label: "Audio Preview", href: "#", status: "Coming soon" },
-  { label: "Lyrics", href: "NoWomanNoCryLyrics.pdf", status: "Download" }
-],        tags: ["Fingerstyle", "Standard", "Intermediate"]
-      },
-{
-        title: "Teardrop in the Sun",
-        artist: "R. L. Eubank",
-        tuning: "Standard",
-        capo: "None",
-        difficulty: "Intermediate",
-        notes: "Notes can be added here later.",
-files: [
-  { label: "Guitar Pro", href: "TeardropintheSun.gpx", status: "Download" },
-  { label: "PDF", href: "TeardropintheSun.pdf", status: "Download" },
-  { label: "Audio Preview", href: "#", status: "Coming soon" },
-  { label: "Lyrics", href: "TearDropInTheSunLyrics.pdf", status: "Download" }
-],        tags: ["Fingerstyle", "Standard", "Intermediate"]
-      },
-{
-        title: "Beautiful Day",
-        artist: "R. Eubank",
-        tuning: "Standard",
-        capo: "None",
-        difficulty: "Intermediate",
-        notes: "Notes can be added here later.",
-files: [
-  { label: "Guitar Pro", href: "BeautifulDay.gp", status: "Download" },
-  { label: "PDF", href: "BeautifulDay.pdf", status: "Download" },
-  { label: "Audio Preview", href: "#", status: "Coming soon" },
-  { label: "Lyrics", href: "BeautifulDayLyrics.pdf", status: "Download" }
-],        tags: ["Fingerstyle", "Standard", "Intermediate"]
-      },
-            {
-        title: "Devil Woman",
-        artist: "Marty Robbins",
-        tuning: "Standard",
-        capo: "None",
-        difficulty: "Intermediate",
-        notes: "Notes can be added here later.",
-files: [
-  { label: "Guitar Pro", href: "DevilWoman.gpx", status: "Download" },
-  { label: "PDF", href: "DevilWoman.pdf", status: "Download" },
-  { label: "Audio Preview", href: "#", status: "Coming soon" },
-  { label: "Lyrics", href: "DevilWomanLyrics.pdf", status: "Download" }
-],        tags: ["Fingerstyle", "Standard", "Intermediate"]
-      },
-      {
-        title: "Hold On",
-        artist: "Tom Waits",
-        tuning: "Dropped D",
-        capo: "None",
-        difficulty: "Easy",
-        notes: "Notes can be added here later.",
-files: [
-  { label: "Guitar Pro", href: "HoldOn.gpx", status: "Download" },
-  { label: "PDF", href: "holdOn.pdf", status: "Download" },
-  { label: "Audio Preview", href: "HoldOn.mp3", status: "Download" }
-],        tags: ["Fingerstyle", "Dropped D", "Easy"]
-      },
-      {
-        title: "Keep Me in Your Heart for a While",
-        artist: "Warren Zevon",
-        tuning: "Standard",
-        capo: "None",
-        difficulty: "Easy",
-        notes: "Notes can be added here later.",
-files: [
-  { label: "Guitar Pro", href: "Keep%20Me%20in%20Your%20Heart%20for%20a%20While.gpx", status: "Download" },
-  { label: "PDF", href: "keepMeInYourHeartForAWhile.pdf", status: "Download" },
-  { label: "Audio Preview", href: "#", status: "Coming soon" }
-],      tags: ["Fingerstyle", "Standard Tuning", "Easy"]
-      },
-      {
-        title: "Abraham, Martin and John",
-        artist: "Richard Holler",
-        tuning: "Open G",
-        capo: "None",
-        difficulty: "Intermediate",
-        notes: "Notes can be added here later.",
-        files: [
-          { label: "Guitar Pro", href: "abrahamMartinandJohn.gp", status: "Download" },
-          { label: "PDF", href: "abrahamMartinandJohn.pdf", status: "Download" },
-          { label: "Audio Preview", href: "AbrahamMartin&John.mp3", status: "Download" }
-        ],
-        tags: ["Fingerstyle", "Open G", "Intermediate"]
-      },
-      {
-        title: "Angel From Montgomery",
-        artist: "John Prine",
-        tuning: "Dropped D",
-        capo: "None",
-        difficulty: "Easy",
-        notes: "Notes can be added here later.",
-        files: [
-          { label: "Guitar Pro", href: "angelFromMontgomery.gp", status: "Download" },
-          { label: "PDF", href: "angelFromMontgomery.pdf", status: "Download" },
-          { label: "Audio Preview", href: "angelFromMontgomery.mp3", status: "Download" }
-        ],
-        tags: ["Fingerstyle", "Dropped D", "Easy"]
-      },
-      {
-        title: "Imagine",
-        artist: "John Lennon",
-        tuning: "Open G",
-        capo: "None",
-        difficulty: "Intermediate",
-        notes: "Notes can be added here later.",
-        files: [
-          { label: "Guitar Pro", href: "Imagine.gp", status: "Download" },
-          { label: "PDF", href: "Imagine.pdf", status: "Download" },
-          { label: "Audio Preview", href: "ImagineWVocal.m4a", status: "Download" }
-        ],
-        tags: ["Fingerstyle", "Dropped D", "Easy"]
-      },
-      {
-        title: "Angie",
-        artist: "The Rolling Stones",
-        tuning: "Standard",
-        capo: "None",
-        difficulty: "Intermediate",
-        notes: "Notes can be added here later.",
-files: [
-  { label: "Guitar Pro", href: "Angie.gpx", status: "Download" },
-  { label: "PDF", href: "angie.pdf", status: "Download" },
-  { label: "Audio Preview", href: "#", status: "Coming soon" }
-],
-tags: ["Fingerstyle", "Standard Tuning", "Intermediate"]
-      },
-      {
-        title: "Doctor My Eyes",
-        artist: "Jackson Browne",
-        tuning: "Open D",
-        capo: "None",
-        difficulty: "Intermediate",
-        notes: "Notes can be added here later.",
-        files: [
-          { label: "Guitar Pro", href: "doctorMyEyes.gp", status: "Download" },
-          { label: "PDF", href: "doctorMyEyes.pdf", status: "Download" },
-          { label: "Audio Preview", href: "#", status: "Coming soon" }
-        ],
-        tags: ["Fingerstyle", "Open D", "Hard"]
-      },
-      {
-        title: "Helpless",
-        artist: "Neil Young",
-        tuning: "Standard",
-        capo: "None",
-        difficulty: "Hard",
-        notes: "Notes can be added here later.",
-        files: [
-          { label: "Guitar Pro", href: "Helpless.gpx", status: "Download" },
-          { label: "PDF", href: "Helpless1.pdf", status: "Download" },
-          { label: "Audio Preview", href: "#", status: "Coming soon" }
-        ],
-        tags: ["Fingerstyle", "Standard Tuning", "Hard"]
-      }
-    ];
+      const text = (
+        song.title +
+        song.artist +
+        song.tuning +
+        song.difficulty +
+        song.tags.join(" ")
+      ).toLowerCase();
 
-function renderSongs() {
-  const container = document.getElementById("songsContainer");
-  const tuningFilterValue = document.getElementById("tuningFilter").value;
-  const searchValue = document.getElementById("songSearch").value.toLowerCase();
+      const matchesSearch =
+        searchValue === "" || text.includes(searchValue);
 
-  const filtered = songs.filter(song => {
-    const matchesTuning =
-      tuningFilterValue === "all" || song.tuning === tuningFilterValue;
+      return matchesTuning && matchesSearch;
+    });
 
-    const text = (
-      song.title +
-      song.artist +
-      song.tuning +
-      song.difficulty +
-      song.tags.join(" ")
-    ).toLowerCase();
+    document.getElementById("songCount").textContent =
+      `${filtered.length} song${filtered.length === 1 ? "" : "s"}`;
 
-    const matchesSearch =
-      searchValue === "" || text.includes(searchValue);
-
-    return matchesTuning && matchesSearch;
-  });
-
-  document.getElementById("songCount").textContent =
-    `${filtered.length} song${filtered.length === 1 ? "" : "s"}`;
-
- if (filtered.length === 0) {
-  container.innerHTML = `
-    <div class="song-card">
-      <p>No songs found.</p>
-    </div>
-  `;
-  return;
-}
-
-container.innerHTML = filtered.map(song => `
-  <article class="song-card">
-    <div class="song-top">
-      <div>
-        <h3>${song.title}</h3>
-        <div class="artist">${song.artist}</div>
-        <div class="tags">
-          ${song.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
+    if (filtered.length === 0) {
+      container.innerHTML = `
+        <div class="song-card">
+          <p>No songs found.</p>
         </div>
-        <p>${song.notes}</p>
-      </div>
-      <div class="song-meta">
-        <div class="row"><span class="label">Tuning</span><span class="value">${song.tuning}</span></div>
-        <div class="row"><span class="label">Capo</span><span class="value">${song.capo}</span></div>
-        <div class="row"><span class="label">Difficulty</span><span class="value">${song.difficulty}</span></div>
-      </div>
-    </div>
-    <div class="files">
-      ${song.files.map(file => `
-        <a class="file-box" href="${file.href}" ${file.href !== "#" ? 'target="_blank"' : ''} style="text-decoration:none; color:inherit; display:block;">
-          <div class="file-label">${file.label}</div>
-          <div class="file-status">${file.status}</div>
-        </a>
-      `).join("")}
-    </div>
-  </article>
-`).join("");     
-  </div>
-    </article>
-  `).join("");
-}
+      `;
+      return;
+    }
 
- document.getElementById("tuningFilter").addEventListener("change", renderSongs);
-document.getElementById("songSearch").addEventListener("input", renderSongs);
+    container.innerHTML = filtered.map(song => `
+      <article class="song-card">
+        <div class="song-top">
+          <div>
+            <h3>${song.title}</h3>
+            <div class="artist">${song.artist}</div>
+            <div class="tags">
+              ${song.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
+            </div>
+            <p>${song.notes}</p>
+          </div>
+          <div class="song-meta">
+            <div class="row"><span class="label">Tuning</span><span class="value">${song.tuning}</span></div>
+            <div class="row"><span class="label">Capo</span><span class="value">${song.capo}</span></div>
+            <div class="row"><span class="label">Difficulty</span><span class="value">${song.difficulty}</span></div>
+          </div>
+        </div>
+        <div class="files">
+          ${song.files.map(file => `
+            <a class="file-box" href="${file.href}" ${file.href !== "#" ? 'target="_blank"' : ''} style="text-decoration:none; color:inherit; display:block;">
+              <div class="file-label">${file.label}</div>
+              <div class="file-status">${file.status}</div>
+            </a>
+          `).join("")}
+        </div>
+      </article>
+    `).join("");
+  }
 
-renderSongs();
+  document.getElementById("tuningFilter").addEventListener("change", renderSongs);
+  document.getElementById("songSearch").addEventListener("input", renderSongs);
+
+  renderSongs();
+</script>
+</body>
+</html>
   </script>
 </body>
 </html>
