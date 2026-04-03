@@ -543,31 +543,43 @@ function renderSongs() {
   document.getElementById("songCount").textContent =
     `${filtered.length} song${filtered.length === 1 ? "" : "s"}`;
 
-  container.innerHTML = filtered.map(song => `
-    <article class="song-card">
-      <div class="song-top">
-        <div>
-          <h3>${song.title}</h3>
-          <div class="artist">${song.artist}</div>
-          <div class="tags">
-            ${song.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
-          </div>
-          <p>${song.notes}</p>
+ if (filtered.length === 0) {
+  container.innerHTML = `
+    <div class="song-card">
+      <p>No songs found.</p>
+    </div>
+  `;
+  return;
+}
+
+container.innerHTML = filtered.map(song => `
+  <article class="song-card">
+    <div class="song-top">
+      <div>
+        <h3>${song.title}</h3>
+        <div class="artist">${song.artist}</div>
+        <div class="tags">
+          ${song.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
         </div>
-        <div class="song-meta">
-          <div class="row"><span class="label">Tuning</span><span class="value">${song.tuning}</span></div>
-          <div class="row"><span class="label">Capo</span><span class="value">${song.capo}</span></div>
-          <div class="row"><span class="label">Difficulty</span><span class="value">${song.difficulty}</span></div>
-        </div>
+        <p>${song.notes}</p>
       </div>
-      <div class="files">
-        ${song.files.map(file => `
-          <a class="file-box" href="${file.href}" ${file.href !== "#" ? 'target="_blank"' : ''} style="text-decoration:none; color:inherit; display:block;">
-            <div class="file-label">${file.label}</div>
-            <div class="file-status">${file.status}</div>
-          </a>
-        `).join("")}
+      <div class="song-meta">
+        <div class="row"><span class="label">Tuning</span><span class="value">${song.tuning}</span></div>
+        <div class="row"><span class="label">Capo</span><span class="value">${song.capo}</span></div>
+        <div class="row"><span class="label">Difficulty</span><span class="value">${song.difficulty}</span></div>
       </div>
+    </div>
+    <div class="files">
+      ${song.files.map(file => `
+        <a class="file-box" href="${file.href}" ${file.href !== "#" ? 'target="_blank"' : ''} style="text-decoration:none; color:inherit; display:block;">
+          <div class="file-label">${file.label}</div>
+          <div class="file-status">${file.status}</div>
+        </a>
+      `).join("")}
+    </div>
+  </article>
+`).join("");     
+  </div>
     </article>
   `).join("");
 }
