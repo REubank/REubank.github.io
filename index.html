@@ -14,6 +14,15 @@
       --dark: #1f1a17;
       --chip: #f1ece6;
     }
+
+.audio-player {
+  margin-top: 16px;
+}
+
+.audio-player audio {
+  width: 100%;
+}
+    
     * { box-sizing: border-box; }
     body {
       margin: 0;
@@ -397,20 +406,20 @@
       ],
       tags: ["Fingerstyle", "Standard", "Intermediate"]
     },
-    {
-      title: "Hold On",
-      artist: "Tom Waits",
-      tuning: "Dropped D",
-      capo: "None",
-      difficulty: "Easy",
-      notes: "Notes can be added here later.",
-      files: [
-        { label: "Guitar Pro", href: "HoldOn.gpx", status: "Download" },
-        { label: "PDF", href: "holdOn.pdf", status: "Download" },
-        { label: "Audio Preview", href: "HoldOn.mp3", status: "Download" }
-      ],
-      tags: ["Fingerstyle", "Dropped D", "Easy"]
-    },
+{
+  title: "Hold On",
+  artist: "Tom Waits",
+  tuning: "Dropped D",
+  capo: "None",
+  difficulty: "Easy",
+  notes: "Notes can be added here later.",
+  files: [
+    { label: "Guitar Pro", href: "HoldOn.gpx", status: "Download" },
+    { label: "PDF", href: "holdOn.pdf", status: "Download" }
+  ],
+  audio: "HoldOn.mp3",
+  tags: ["Fingerstyle", "Dropped D", "Easy"]
+},
     {
       title: "Keep Me in Your Heart for a While",
       artist: "Warren Zevon",
@@ -617,15 +626,24 @@
             <div class="row"><span class="label">Difficulty</span><span class="value">${song.difficulty}</span></div>
           </div>
         </div>
-        <div class="files">
-          ${song.files.map(file => `
-            <a class="file-box" href="${file.href}" ${file.href !== "#" ? 'target="_blank"' : ''} style="text-decoration:none; color:inherit; display:block;">
-              <div class="file-label">${file.label}</div>
-              <div class="file-status">${file.status}</div>
-            </a>
-          `).join("")}
-        </div>
-      </article>
+ <div class="files">
+  ${song.files.map(file => `
+    <a class="file-box" href="${file.href}" ${file.href !== "#" ? 'target="_blank"' : ''} style="text-decoration:none; color:inherit; display:block;">
+      <div class="file-label">${file.label}</div>
+      <div class="file-status">${file.status}</div>
+    </a>
+  `).join("")}
+</div>
+
+${song.audio ? `
+  <div class="audio-player">
+    <div class="file-label">Audio Preview</div>
+    <audio controls preload="none">
+      <source src="${song.audio}">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+` : ""}     </article>
     `).join("");
   }
 
