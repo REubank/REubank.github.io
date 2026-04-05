@@ -936,20 +936,6 @@ function renderSongs() {
     </article>
   `).join("");
 }
-</div>
-
-${song.audio ? `
-  <div class="audio-player">
-    <div class="file-label">Audio Preview</div>
-    <audio controls preload="none">
-      <source src="${song.audio}">
-      Your browser does not support the audio element.
-    </audio>
-  </div>
-` : ""}     </article>
-    `).join("");
-  }
-
   document.getElementById("tuningFilter").addEventListener("change", renderSongs);
   document.getElementById("songSearch").addEventListener("input", renderSongs);
 
