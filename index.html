@@ -865,7 +865,25 @@
     const tuningFilterValue = document.getElementById("tuningFilter").value;
     const searchValue = document.getElementById("songSearch").value.toLowerCase();
 
-    const filtered = songs.filter(song => {
+    const filtered = songs
+  .filter(song => {
+    const matchesTuning =
+      tuningFilterValue === "all" || song.tuning === tuningFilterValue;
+
+    const text = (
+      song.title +
+      song.artist +
+      song.tuning +
+      song.difficulty +
+      song.tags.join(" ")
+    ).toLowerCase();
+
+    const matchesSearch =
+      searchValue === "" || text.includes(searchValue);
+
+    return matchesTuning && matchesSearch;
+  })
+  .sort((a, b) => a.title.localeCompare(b.title));
       const matchesTuning =
         tuningFilterValue === "all" || song.tuning === tuningFilterValue;
 
